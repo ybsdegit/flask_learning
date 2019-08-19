@@ -1,0 +1,53 @@
+# 第一章 环境
+# 需要设置flask环境变量
+# (venv) $ set FLASK_APP=microblog.py  windows
+# (venv) $ export FLASK_APP=microblog.py  linux
+
+# 第二章 模板
+
+# 第三章 表单
+# 安装插件 Flask-WTF 处理应用中的表单
+# pip install flask-wtf
+# app.config['SECRET_KEY'] = 'you-will-never-guess'
+# 建议采用松耦合的方案，将config写入配置文件中
+
+# 第四章 数据库
+# 安装插件Flask-SQLAlchemy  Object Relational Mapper ORM
+# pip3 install flask-sqlalchemy
+
+# 安装插件Flask-Migrate 数据库迁移
+# pip3 install flask-migrate
+
+# flask db init  创建microblog的迁移存储库
+# flask db migrate -m "users table" 生成迁移脚本
+# flask db upgrade 将更改应用到数据库
+
+
+# 第五章 登录
+安装插件 Flask-Login
+pip install flask-login
+## UserMin
+is_authenticated: 一个用来表示用户是否通过登录认证的属性，用True和False表示。
+is_active: 如果用户账户是活跃的，那么这个属性是True，否则就是False（译者注：活跃用户的定义是该用户的登录状态是否通过用户名密码登录，通过“记住我”功能保持登录状态的用户是非活跃的）。
+is_anonymous: 常规用户的该属性是False，对特定的匿名用户是True。
+get_id(): 返回用户的唯一id的方法，返回值类型是字符串(Python 2下返回unicode字符串).
+
+
+# 第六章 个人主页和头像
+
+# 第七章 错误处理
+
+# 第十章：邮件支持
+pip install flask-mail
+
+# 开启调试模式
+FLASK_ENV=development
+pip install pyjwt
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+# 启动方式
+执行命令
+flask run
